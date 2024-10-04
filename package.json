@@ -4,13 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "tsx watch src/server.ts"
+    "dev": "tsx watch src/server.ts",
+    "lint": "eslint src --ext .ts --fix"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@rocketseat/eslint-config": "^2.2.2",
     "@types/node": "^22.7.4",
+    "eslint": "^8.57.1",
     "tsx": "^4.19.1",
     "typescript": "^5.6.2"
   },
