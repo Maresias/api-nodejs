@@ -1,4 +1,4 @@
 node_modules
 db/app.db
 .env
-daatabase.ts
+database.ts
