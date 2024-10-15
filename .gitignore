@@ -2,3 +2,5 @@ node_modules
 db/app.db
 .env
 database.ts
+.env.test
+db/test.db

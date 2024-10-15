@@ -1,4 +1,5 @@
-import { it, expect, beforeAll, afterAll, describe } from 'vitest'
+import { it, expect, beforeAll, afterAll, describe, beforeEach } from 'vitest'
+import { execSync } from 'child_process'
 import request from 'supertest'
 import { app } from '../src/app'
 
@@ -9,6 +10,11 @@ describe('Transaction route', () => {
 
   afterAll(async () => {
     await app.close()
+  })
+
+  beforeEach(() => {
+    execSync('npm run knex migrate:rollback --all')
+    execSync('npm run knex migrate:latest')
   })
 
   it.skip('should be able te create a new transaction', async () => {
