@@ -2,7 +2,7 @@ import { env } from './env'
 import { knex as setupKenx, Knex } from 'knex'
 
 if (!process.env.DATABASE_URL) {
-  throw new Error('DTABASE_URL not found')
+  throw new Error('DATABASE_URL not found')
 }
 
 export const config: Knex.Config = {
